@@ -28,14 +28,9 @@ public class CompositeDirectory extends Directory {
 	{
 		map.put(p_entity, p_child);
 		if(parent != null) {
-			// If parent knows already that this directory is in this branch, do nothing
-			
+			// (If parent knows already that this directory is in this branch, do nothing)
 			// Else add/update its map entry
-			
-			if (parent.lookup(p_entity) == null)
-			
-			else
-				parent.insert(p_entity, this);
+			parent.insert(p_entity, this);
 		}
 	}
 
